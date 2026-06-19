@@ -4,7 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Suzane Santos</title>
-  <meta name="description" content="Site pessoal acadêmico de Suzane Santos, doutoranda em Ciência da Computação com foco em IHC, UX, avaliação e inclusão." />
+  <meta
+    name="description"
+    content="Site pessoal acadêmico de Suzane Santos, doutoranda em Ciência da Computação com foco em IHC, UX, avaliação e inclusão."
+  />
   <style>
     :root {
       --bg: #f5f4f1;
@@ -122,15 +125,19 @@
       padding: 20px;
     }
 
+    .side-layout {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 18px;
+      align-items: start;
+    }
+
     .profile-photo {
-      width: 100%;
-      max-width: 220px;
-      height: auto;
-      aspect-ratio: 1 / 1;
+      width: 140px;
+      height: 170px;
       object-fit: cover;
       border-radius: 8px;
       border: 1px solid var(--line);
-      margin: 0 0 18px;
       display: block;
     }
 
@@ -283,8 +290,13 @@
         font-size: 2.2rem;
       }
 
+      .side-layout {
+        grid-template-columns: 1fr;
+      }
+
       .profile-photo {
-        max-width: 180px;
+        width: 160px;
+        height: 190px;
       }
     }
   </style>
@@ -309,22 +321,26 @@
         </div>
 
         <aside class="side-card" aria-label="Informações principais">
-          <img
-            src="./suzane.svg"
-            alt="Foto de Suzane Santos"
-            class="profile-photo"
-            width="600"
-            height="600"
-          />
+          <div class="side-layout">
+            <img
+              src="./suzane.svg"
+              alt="Foto de Suzane Santos"
+              class="profile-photo"
+              width="420"
+              height="510"
+            />
 
-          <h2>Informações</h2>
-          <ul class="meta-list">
-            <li><strong>Área:</strong> Interação Humano-Computador e UX</li>
-            <li><strong>Vínculo:</strong> Doutorado em Ciência da Computação</li>
-            <li><strong>Local:</strong> Pará, Brasil</li>
-            <li><strong>GitHub:</strong> <a href="https://github.com/suzadedossantos" target="_blank" rel="noopener noreferrer">suzadedossantos</a></li>
-            <li><strong>E-mail:</strong> <a href="mailto:seuemail@exemplo.com">seuemail@exemplo.com</a></li>
-          </ul>
+            <div>
+              <h2>Informações</h2>
+              <ul class="meta-list">
+                <li><strong>Área:</strong> Interação Humano-Computador e UX</li>
+                <li><strong>Vínculo:</strong> Doutorado em Ciência da Computação</li>
+                <li><strong>Local:</strong> Pará, Brasil</li>
+                <li><strong>GitHub:</strong> <a href="https://github.com/suzadedossantos" target="_blank" rel="noopener noreferrer">suzadedossantos</a></li>
+                <li><strong>E-mail:</strong> <a href="mailto:seuemail@exemplo.com">seuemail@exemplo.com</a></li>
+              </ul>
+            </div>
+          </div>
         </aside>
       </div>
     </div>
