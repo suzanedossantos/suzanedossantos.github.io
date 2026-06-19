@@ -10,15 +10,14 @@
   />
   <style>
     :root {
-      --bg: #f5f4f1;
+      --bg: #f7f6f2;
       --surface: #ffffff;
-      --text: #1f1f1c;
-      --muted: #66665f;
-      --line: #d9d6cf;
+      --text: #22211f;
+      --muted: #6e6b65;
+      --line: #d8d4cd;
       --primary: #0f5c56;
-      --primary-soft: #edf5f4;
-      --max: 1080px;
-      --radius: 10px;
+      --max: 1160px;
+      --radius: 6px;
     }
 
     * {
@@ -31,10 +30,10 @@
 
     body {
       margin: 0;
-      font-family: Georgia, "Times New Roman", serif;
       background: var(--bg);
       color: var(--text);
-      line-height: 1.65;
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.7;
     }
 
     a {
@@ -44,6 +43,12 @@
 
     a:hover {
       text-decoration: underline;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
     }
 
     .container {
@@ -60,7 +65,7 @@
     .skip-link:focus {
       left: 16px;
       top: 16px;
-      background: white;
+      background: #fff;
       padding: 10px 14px;
       border: 1px solid var(--line);
       z-index: 1000;
@@ -71,202 +76,146 @@
       border-bottom: 1px solid var(--line);
     }
 
-    .topbar {
-      padding: 28px 0 18px;
-    }
-
-    .hero {
-      padding: 20px 0 36px;
-    }
-
-    .hero-grid {
+    .page-layout {
       display: grid;
-      grid-template-columns: 1.45fr 0.85fr;
-      gap: 44px;
+      grid-template-columns: minmax(0, 1fr) 300px;
+      gap: 56px;
       align-items: start;
     }
 
-    .site-name {
-      font-size: 1rem;
-      letter-spacing: 0.04em;
+    .hero {
+      padding: 44px 0 28px;
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.92rem;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
       color: var(--muted);
-      margin: 0 0 6px;
-      font-family: Arial, Helvetica, sans-serif;
     }
 
     h1 {
-      font-size: 3rem;
-      line-height: 1.05;
       margin: 0 0 12px;
+      font-size: clamp(2.2rem, 1.8rem + 1.8vw, 3.4rem);
+      line-height: 1.05;
       font-weight: normal;
     }
 
     .subtitle {
+      margin: 0 0 20px;
       font-size: 1.15rem;
       color: var(--muted);
-      margin: 0 0 18px;
     }
 
     .intro {
-      max-width: 62ch;
+      max-width: 64ch;
       margin: 0;
+      font-size: 1.02rem;
     }
 
-    .hero-side {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
+    .sidebar {
+      padding: 44px 0 28px;
     }
 
-    .photo-card,
-    .info-card {
-      background: var(--primary-soft);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 20px;
-    }
-
-    .photo-card {
-      background: var(--surface);
+    .sidebar-block + .sidebar-block {
+      margin-top: 26px;
+      padding-top: 22px;
+      border-top: 1px solid var(--line);
     }
 
     .profile-photo {
       width: 100%;
-      max-width: 260px;
-      height: auto;
+      max-width: 280px;
       aspect-ratio: 4 / 5;
       object-fit: cover;
-      border-radius: 8px;
+      border-radius: var(--radius);
       border: 1px solid var(--line);
-      display: block;
-      margin: 0 auto;
+      background: #ece9e2;
     }
 
-    .info-card h2 {
-      margin-top: 0;
-      margin-bottom: 12px;
-      font-size: 1rem;
+    .sidebar-title {
+      margin: 0 0 12px;
       font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.9rem;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
       color: var(--muted);
     }
 
-    .meta-list {
+    .meta-list,
+    .side-nav,
+    .link-list {
       list-style: none;
-      padding: 0;
       margin: 0;
+      padding: 0;
     }
 
-    .meta-list li + li {
+    .meta-list li,
+    .link-list li {
+      margin-bottom: 10px;
+    }
+
+    .side-nav li + li {
       margin-top: 10px;
     }
 
-    nav {
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-      background: var(--surface);
-    }
-
-    .nav-inner {
-      display: flex;
-      gap: 24px;
-      flex-wrap: wrap;
-      padding: 14px 0;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.95rem;
-    }
-
-    .nav-inner a {
+    .side-nav a {
       color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.96rem;
     }
 
     main {
-      padding: 34px 0 60px;
+      padding: 28px 0 64px;
     }
 
-    .content-grid {
+    .main-layout {
       display: grid;
-      grid-template-columns: 220px 1fr;
-      gap: 36px;
+      grid-template-columns: minmax(0, 1fr) 300px;
+      gap: 56px;
+      align-items: start;
     }
 
-    .section-menu {
-      position: sticky;
-      top: 18px;
-      align-self: start;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    .section-menu h2 {
-      font-size: 0.92rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--muted);
-      margin: 0 0 14px;
-    }
-
-    .section-menu ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .section-menu li + li {
-      margin-top: 10px;
-    }
-
-    .section-menu a {
-      color: var(--muted);
-    }
-
-    .main-content {
-      display: flex;
-      flex-direction: column;
-      gap: 22px;
-    }
-
-    section {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 28px;
+    .content section + section {
+      margin-top: 36px;
+      padding-top: 28px;
+      border-top: 1px solid var(--line);
     }
 
     section h2 {
-      margin-top: 0;
-      margin-bottom: 14px;
-      font-size: 1.65rem;
+      margin: 0 0 14px;
+      font-size: 1.55rem;
+      line-height: 1.2;
       font-weight: normal;
     }
 
     section p {
       margin-top: 0;
+      max-width: 72ch;
     }
 
-    .tag-list,
-    .link-list {
-      list-style: none;
-      padding: 0;
+    .plain-list {
       margin: 0;
+      padding-left: 20px;
     }
 
-    .tag-list li,
-    .link-list li {
-      padding: 10px 0;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .tag-list li:last-child,
-    .link-list li:last-child {
-      border-bottom: none;
+    .plain-list li + li {
+      margin-top: 8px;
     }
 
     .two-columns {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 24px;
+      gap: 28px;
+    }
+
+    .mini-block h3 {
+      margin-top: 0;
+      margin-bottom: 8px;
+      font-size: 1.08rem;
+      font-weight: normal;
     }
 
     footer {
@@ -277,19 +226,21 @@
       font-size: 0.92rem;
     }
 
-    @media (max-width: 900px) {
-      .hero-grid,
-      .content-grid,
+    @media (max-width: 960px) {
+      .page-layout,
+      .main-layout,
       .two-columns {
         grid-template-columns: 1fr;
       }
 
-      .section-menu {
-        position: static;
+      .sidebar,
+      .hero,
+      main {
+        padding-top: 28px;
       }
 
-      h1 {
-        font-size: 2.2rem;
+      .sidebar {
+        border-top: 1px solid var(--line);
       }
 
       .profile-photo {
@@ -302,75 +253,60 @@
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
   <header>
-    <div class="container topbar">
+    <div class="container page-layout">
       <div class="hero">
-        <div class="hero-grid">
-          <div>
-            <p class="site-name">Site pessoal acadêmico</p>
-            <h1>Suzane Santos</h1>
-            <p class="subtitle">
-              Doutoranda em Ciência da Computação · IHC · UX · Avaliação de tecnologias interativas
-            </p>
-            <p class="intro">
-              Pesquiso experiência do usuário, instrumentos de avaliação, adaptação transcultural,
-              acessibilidade e inclusão em contextos brasileiros. Meu trabalho se concentra em métodos,
-              escalas e desenho de pesquisas em Interação Humano-Computador.
-            </p>
-          </div>
-
-          <div class="hero-side">
-            <aside class="photo-card" aria-label="Foto de perfil">
-              <img
-                src="./suzane.svg"
-                alt="Foto de Suzane Santos"
-                class="profile-photo"
-                width="520"
-                height="650"
-              />
-            </aside>
-
-            <aside class="info-card" aria-label="Informações principais">
-              <h2>Informações</h2>
-              <ul class="meta-list">
-                <li><strong>Área:</strong> Interação Humano-Computador e UX</li>
-                <li><strong>Vínculo:</strong> Doutorado em Ciência da Computação</li>
-                <li><strong>Local:</strong> Pará, Brasil</li>
-                <li><strong>GitHub:</strong> <a href="https://github.com/suzadedossantos" target="_blank" rel="noopener noreferrer">suzadedossantos</a></li>
-                <li><strong>E-mail:</strong> <a href="mailto:seuemail@exemplo.com">seuemail@exemplo.com</a></li>
-              </ul>
-            </aside>
-          </div>
-        </div>
+        <p class="eyebrow">Site pessoal acadêmico</p>
+        <h1>Suzane Santos</h1>
+        <p class="subtitle">
+          Doutoranda em Ciência da Computação · IHC · UX · Avaliação de tecnologias interativas
+        </p>
+        <p class="intro">
+          Pesquiso experiência do usuário, instrumentos de avaliação, adaptação transcultural,
+          acessibilidade e inclusão em contextos brasileiros. Meu trabalho se concentra em métodos,
+          escalas e desenho de pesquisas em Interação Humano-Computador.
+        </p>
       </div>
+
+      <aside class="sidebar" aria-label="Informações laterais">
+        <div class="sidebar-block">
+          <img
+            src="./foto-suzane.jpg"
+            alt="Foto de Suzane Santos"
+            class="profile-photo"
+            width="560"
+            height="700"
+          />
+        </div>
+
+        <div class="sidebar-block">
+          <h2 class="sidebar-title">Informações</h2>
+          <ul class="meta-list">
+            <li><strong>Área:</strong> Interação Humano-Computador e UX</li>
+            <li><strong>Vínculo:</strong> Doutorado em Ciência da Computação</li>
+            <li><strong>Local:</strong> Pará, Brasil</li>
+            <li><strong>GitHub:</strong> <a href="https://github.com/suzadedossantos" target="_blank" rel="noopener noreferrer">suzadedossantos</a></li>
+            <li><strong>E-mail:</strong> <a href="mailto:seuemail@exemplo.com">seuemail@exemplo.com</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-block">
+          <h2 class="sidebar-title">Navegação</h2>
+          <ul class="side-nav">
+            <li><a href="#perfil">Perfil</a></li>
+            <li><a href="#pesquisa">Pesquisa</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#formacao">Formação</a></li>
+            <li><a href="#links">Links acadêmicos</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </div>
+      </aside>
     </div>
   </header>
 
-  <nav aria-label="Navegação principal">
-    <div class="container nav-inner">
-      <a href="#perfil">Perfil</a>
-      <a href="#pesquisa">Pesquisa</a>
-      <a href="#projetos">Projetos</a>
-      <a href="#formacao">Formação</a>
-      <a href="#links">Links</a>
-      <a href="#contato">Contato</a>
-    </div>
-  </nav>
-
-  <main id="conteudo" class="container">
-    <div class="content-grid">
-      <aside class="section-menu" aria-label="Seções da página">
-        <h2>Nesta página</h2>
-        <ul>
-          <li><a href="#perfil">Perfil</a></li>
-          <li><a href="#pesquisa">Pesquisa</a></li>
-          <li><a href="#projetos">Projetos</a></li>
-          <li><a href="#formacao">Formação</a></li>
-          <li><a href="#links">Links acadêmicos</a></li>
-          <li><a href="#contato">Contato</a></li>
-        </ul>
-      </aside>
-
-      <div class="main-content">
+  <main id="conteudo">
+    <div class="container main-layout">
+      <div class="content">
         <section id="perfil">
           <h2>Perfil</h2>
           <p>
@@ -391,7 +327,7 @@
             Meus interesses de pesquisa estão relacionados à avaliação de UX e à produção de evidências
             metodologicamente rigorosas em IHC.
           </p>
-          <ul class="tag-list">
+          <ul class="plain-list">
             <li>Avaliação de UX com escalas e questionários.</li>
             <li>Adaptação transcultural e validação de instrumentos.</li>
             <li>Revisões de literatura e síntese de evidências.</li>
@@ -403,14 +339,14 @@
         <section id="projetos">
           <h2>Projetos</h2>
           <div class="two-columns">
-            <div>
+            <div class="mini-block">
               <h3>Revisões e mapeamentos</h3>
               <p>
                 Estudos voltados à identificação, análise e comparação de instrumentos de avaliação
                 de experiência do usuário, especialmente em língua portuguesa e no contexto brasileiro.
               </p>
             </div>
-            <div>
+            <div class="mini-block">
               <h3>Inclusão e contexto social</h3>
               <p>
                 Investigações sobre avaliação de tecnologias considerando acessibilidade, diversidade,
@@ -422,7 +358,7 @@
 
         <section id="formacao">
           <h2>Formação</h2>
-          <ul class="tag-list">
+          <ul class="plain-list">
             <li>Doutoranda em Ciência da Computação, com foco em IHC e UX.</li>
             <li>Graduada em Engenharia da Computação.</li>
             <li>Atuação em pesquisa, extensão e desenvolvimento acadêmico.</li>
@@ -447,10 +383,13 @@
             você pode me escrever por e-mail ou acessar meus perfis acadêmicos e institucionais.
           </p>
           <p>
-            <strong>E-mail:</strong> <a href="mailto:seuemail@exemplo.com">seuemail@exemplo.com</a>
+            <strong>E-mail:</strong>
+            <a href="mailto:seuemail@exemplo.com">seuemail@exemplo.com</a>
           </p>
         </section>
       </div>
+
+      <aside aria-hidden="true"></aside>
     </div>
   </main>
 
