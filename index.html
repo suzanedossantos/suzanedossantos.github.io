@@ -72,12 +72,18 @@
     }
 
     .topbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 20px;
       padding: 28px 0 18px;
-      flex-wrap: wrap;
+    }
+
+    .hero {
+      padding: 20px 0 36px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.45fr 0.85fr;
+      gap: 44px;
+      align-items: start;
     }
 
     .site-name {
@@ -87,17 +93,6 @@
       color: var(--muted);
       margin: 0 0 6px;
       font-family: Arial, Helvetica, sans-serif;
-    }
-
-    .hero {
-      padding: 20px 0 36px;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.4fr 0.8fr;
-      gap: 44px;
-      align-items: start;
     }
 
     h1 {
@@ -118,30 +113,37 @@
       margin: 0;
     }
 
-    .side-card {
+    .hero-side {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .photo-card,
+    .info-card {
       background: var(--primary-soft);
       border: 1px solid var(--line);
       border-radius: var(--radius);
       padding: 20px;
     }
 
-    .side-layout {
-      display: grid;
-      grid-template-columns: 140px 1fr;
-      gap: 18px;
-      align-items: start;
+    .photo-card {
+      background: var(--surface);
     }
 
     .profile-photo {
-      width: 140px;
-      height: 170px;
+      width: 100%;
+      max-width: 260px;
+      height: auto;
+      aspect-ratio: 4 / 5;
       object-fit: cover;
       border-radius: 8px;
       border: 1px solid var(--line);
       display: block;
+      margin: 0 auto;
     }
 
-    .side-card h2 {
+    .info-card h2 {
       margin-top: 0;
       margin-bottom: 12px;
       font-size: 1rem;
@@ -290,13 +292,8 @@
         font-size: 2.2rem;
       }
 
-      .side-layout {
-        grid-template-columns: 1fr;
-      }
-
       .profile-photo {
-        width: 160px;
-        height: 190px;
+        max-width: 220px;
       }
     }
   </style>
@@ -305,32 +302,34 @@
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
   <header>
-    <div class="container">
-      <div class="topbar">
-        <div>
-          <p class="site-name">Site pessoal acadêmico</p>
-          <h1>Suzane Santos</h1>
-          <p class="subtitle">
-            Doutoranda em Ciência da Computação · IHC · UX · Avaliação de tecnologias interativas
-          </p>
-          <p class="intro">
-            Pesquiso experiência do usuário, instrumentos de avaliação, adaptação transcultural,
-            acessibilidade e inclusão em contextos brasileiros. Meu trabalho se concentra em métodos,
-            escalas e desenho de pesquisas em Interação Humano-Computador.
-          </p>
-        </div>
+    <div class="container topbar">
+      <div class="hero">
+        <div class="hero-grid">
+          <div>
+            <p class="site-name">Site pessoal acadêmico</p>
+            <h1>Suzane Santos</h1>
+            <p class="subtitle">
+              Doutoranda em Ciência da Computação · IHC · UX · Avaliação de tecnologias interativas
+            </p>
+            <p class="intro">
+              Pesquiso experiência do usuário, instrumentos de avaliação, adaptação transcultural,
+              acessibilidade e inclusão em contextos brasileiros. Meu trabalho se concentra em métodos,
+              escalas e desenho de pesquisas em Interação Humano-Computador.
+            </p>
+          </div>
 
-        <aside class="side-card" aria-label="Informações principais">
-          <div class="side-layout">
-            <img
-              src="./suzane.svg"
-              alt="Foto de Suzane Santos"
-              class="profile-photo"
-              width="420"
-              height="510"
-            />
+          <div class="hero-side">
+            <aside class="photo-card" aria-label="Foto de perfil">
+              <img
+                src="./suzane.svg"
+                alt="Foto de Suzane Santos"
+                class="profile-photo"
+                width="520"
+                height="650"
+              />
+            </aside>
 
-            <div>
+            <aside class="info-card" aria-label="Informações principais">
               <h2>Informações</h2>
               <ul class="meta-list">
                 <li><strong>Área:</strong> Interação Humano-Computador e UX</li>
@@ -339,9 +338,9 @@
                 <li><strong>GitHub:</strong> <a href="https://github.com/suzadedossantos" target="_blank" rel="noopener noreferrer">suzadedossantos</a></li>
                 <li><strong>E-mail:</strong> <a href="mailto:seuemail@exemplo.com">seuemail@exemplo.com</a></li>
               </ul>
-            </div>
+            </aside>
           </div>
-        </aside>
+        </div>
       </div>
     </div>
   </header>
