@@ -122,6 +122,18 @@
       padding: 20px;
     }
 
+    .profile-photo {
+      width: 100%;
+      max-width: 220px;
+      height: auto;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      margin: 0 0 18px;
+      display: block;
+    }
+
     .side-card h2 {
       margin-top: 0;
       margin-bottom: 12px;
@@ -270,6 +282,10 @@
       h1 {
         font-size: 2.2rem;
       }
+
+      .profile-photo {
+        max-width: 180px;
+      }
     }
   </style>
 </head>
@@ -293,6 +309,14 @@
         </div>
 
         <aside class="side-card" aria-label="Informações principais">
+          <img
+            src="./suzane.svg"
+            alt="Foto de Suzane Santos"
+            class="profile-photo"
+            width="600"
+            height="600"
+          />
+
           <h2>Informações</h2>
           <ul class="meta-list">
             <li><strong>Área:</strong> Interação Humano-Computador e UX</li>
