@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Suzane Santos</title>
-  <meta name="description" content="Site pessoal acadêmico de Suzane Santos, doutoranda em Ciência da Computação com foco em IHC, UX, avaliação e inclusão." />
+  <meta name="description" content="Site pessoal acadêmico de Suzane Santos, doutoranda em Ciência da Computação com foco em Interação Humano-Computador, UX, avaliação, acessibilidade e inclusão." />
   <style>
     :root {
       --bg: #f5f4f1;
@@ -86,10 +86,6 @@
       font-family: Arial, Helvetica, sans-serif;
     }
 
-    .hero {
-      padding: 20px 0 36px;
-    }
-
     .hero-grid {
       display: grid;
       grid-template-columns: 1.4fr 0.8fr;
@@ -122,16 +118,25 @@
       padding: 20px;
     }
 
+    .side-card-layout {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+    }
+
     .profile-photo {
-      width: 100%;
-      max-width: 220px;
-      height: auto;
-      aspect-ratio: 1 / 1;
+      width: 160px;
+      height: 160px;
       object-fit: cover;
       border-radius: 8px;
       border: 1px solid var(--line);
-      margin: 0 0 18px;
       display: block;
+      flex: 0 0 160px;
+    }
+
+    .side-card-info {
+      flex: 1;
+      min-width: 0;
     }
 
     .side-card h2 {
@@ -283,8 +288,14 @@
         font-size: 2.2rem;
       }
 
+      .side-card-layout {
+        flex-direction: column;
+      }
+
       .profile-photo {
-        max-width: 180px;
+        width: 180px;
+        height: 180px;
+        flex-basis: auto;
       }
     }
   </style>
@@ -299,32 +310,34 @@
           <p class="site-name">Site pessoal acadêmico</p>
           <h1>Suzane Santos</h1>
           <p class="subtitle">
-            Doutoranda em Ciência da Computação · IHC · UX · Avaliação de tecnologias interativas
+            Doutoranda em Ciência da Computação · Interação Humano-Computador · UX · Avaliação e acessibilidade
           </p>
           <p class="intro">
-            Pesquiso experiência do usuário, instrumentos de avaliação, adaptação transcultural,
-            acessibilidade e inclusão em contextos brasileiros. Meu trabalho se concentra em métodos,
-            escalas e desenho de pesquisas em Interação Humano-Computador.
+            Sou doutoranda em Ciências de Computação e Matemática Computacional na Universidade de São Paulo (USP), com pesquisa em Interação Humano-Computador, avaliação de experiência do usuário, desenvolvimento e validação de instrumentos de medição, revisões sistemáticas e rápidas de literatura e estudos empíricos com populações específicas.
           </p>
         </div>
 
         <aside class="side-card" aria-label="Informações principais">
-          <img
-            src="./foto-suzane.jpg"
-            alt="Foto de Suzane Santos"
-            class="profile-photo"
-            width="600"
-            height="600"
-          />
+          <div class="side-card-layout">
+            <img
+              src="./foto-suzane.jpg"
+              alt="Foto de Suzane Santos"
+              class="profile-photo"
+              width="600"
+              height="600"
+            />
 
-          <h2>Informações</h2>
-          <ul class="meta-list">
-            <li><strong>Área:</strong> Interação Humano-Computador e UX</li>
-            <li><strong>Vínculo:</strong> Doutorado em Ciência da Computação</li>
-            <li><strong>Local:</strong> Pará, Brasil</li>
-            <li><strong>GitHub:</strong> <a href="https://github.com/suzadedossantos" target="_blank" rel="noopener noreferrer">suzadedossantos</a></li>
-            <li><strong>E-mail:</strong> <a href="mailto:seuemail@exemplo.com">seuemail@exemplo.com</a></li>
-          </ul>
+            <div class="side-card-info">
+              <h2>Informações</h2>
+              <ul class="meta-list">
+                <li><strong>Área:</strong> Interação Humano-Computador e UX</li>
+                <li><strong>Vínculo:</strong> Doutorado em Ciências de Computação e Matemática Computacional, USP</li>
+                <li><strong>Pesquisa:</strong> Avaliação de UX, instrumentos, acessibilidade e design inclusivo</li>
+                <li><strong>Lattes:</strong> <a href="http://lattes.cnpq.br/4553735282943824" target="_blank" rel="noopener noreferrer">4553735282943824</a></li>
+                <li><strong>ORCID:</strong> <a href="https://orcid.org/0000-0003-0626-144X" target="_blank" rel="noopener noreferrer">0000-0003-0626-144X</a></li>
+              </ul>
+            </div>
+          </div>
         </aside>
       </div>
     </div>
@@ -359,29 +372,24 @@
         <section id="perfil">
           <h2>Perfil</h2>
           <p>
-            Sou pesquisadora na área de Interação Humano-Computador, com foco em experiência do usuário,
-            avaliação de sistemas interativos e instrumentos de autorrelato. Minha trajetória acadêmica
-            articula tecnologia, metodologia e compromisso com contextos sociais diversos.
+            Sou doutoranda em Ciências de Computação e Matemática Computacional na Universidade de São Paulo (USP). Também concluí o mestrado no mesmo programa, com a dissertação <em>EmoFrame</em>, um framework composto por avaliações de respostas emocionais de usuários frente a sistemas interativos, e sou bacharela em Engenharia da Computação pela Universidade Federal do Pará (UFPA).
           </p>
           <p>
-            Tenho interesse especial em instrumentos validados para o português brasileiro, em processos
-            de adaptação transcultural e em abordagens que considerem acessibilidade, diversidade e inclusão
-            no desenvolvimento e na avaliação de tecnologias.
+            Minha atuação articula pesquisa em Interação Humano-Computador, avaliação de experiência do usuário, metodologias de pesquisa e desenvolvimento de instrumentos. Tenho interesse especial em acessibilidade, design inclusivo, populações com baixa literacia e estudos com seres humanos conduzidos com rigor ético e metodológico.
           </p>
         </section>
 
         <section id="pesquisa">
           <h2>Pesquisa</h2>
           <p>
-            Meus interesses de pesquisa estão relacionados à avaliação de UX e à produção de evidências
-            metodologicamente rigorosas em IHC.
+            Minha pesquisa está centrada na avaliação de experiência do usuário e na produção de evidências metodologicamente rigorosas em IHC.
           </p>
           <ul class="tag-list">
-            <li>Avaliação de UX com escalas e questionários.</li>
-            <li>Adaptação transcultural e validação de instrumentos.</li>
-            <li>Revisões de literatura e síntese de evidências.</li>
-            <li>Acessibilidade e inclusão em sistemas interativos.</li>
-            <li>Avaliação com populações diversas e contextos brasileiros.</li>
+            <li>Desenvolvimento e validação de instrumentos de medição em UX.</li>
+            <li>Revisões sistemáticas e rápidas de literatura.</li>
+            <li>Frameworks conceituais para avaliação de experiência do usuário.</li>
+            <li>Design de surveys e análise de dados quantitativos e qualitativos.</li>
+            <li>Acessibilidade, design inclusivo e avaliação com populações específicas.</li>
           </ul>
         </section>
 
@@ -389,17 +397,15 @@
           <h2>Projetos</h2>
           <div class="two-columns">
             <div>
-              <h3>Revisões e mapeamentos</h3>
+              <h3>EmoFrame</h3>
               <p>
-                Estudos voltados à identificação, análise e comparação de instrumentos de avaliação
-                de experiência do usuário, especialmente em língua portuguesa e no contexto brasileiro.
+                Framework voltado à avaliação de respostas emocionais de usuários frente a sistemas interativos, desenvolvido no contexto do meu mestrado e desdobrado em pesquisas posteriores sobre avaliação de UX.
               </p>
             </div>
             <div>
-              <h3>Inclusão e contexto social</h3>
+              <h3>Acessibilidade e inclusão</h3>
               <p>
-                Investigações sobre avaliação de tecnologias considerando acessibilidade, diversidade,
-                populações marginalizadas e especificidades culturais e linguísticas do Brasil.
+                Pesquisas e colaborações sobre barreiras de acessibilidade em ferramentas de desenvolvimento, educação em acessibilidade, design inclusivo e tecnologias para diferentes públicos e contextos sociais.
               </p>
             </div>
           </div>
@@ -408,28 +414,28 @@
         <section id="formacao">
           <h2>Formação</h2>
           <ul class="tag-list">
-            <li>Doutoranda em Ciência da Computação, com foco em IHC e UX.</li>
-            <li>Graduada em Engenharia da Computação.</li>
-            <li>Atuação em pesquisa, extensão e desenvolvimento acadêmico.</li>
+            <li>Doutorado em andamento em Ciências de Computação e Matemática Computacional, USP.</li>
+            <li>Mestrado em Ciências de Computação e Matemática Computacional, USP, concluído em 2022.</li>
+            <li>Bacharelado em Engenharia da Computação, UFPA.</li>
+            <li>Quatro anos de iniciação científica com pesquisas em Computação Bio-Inspirada.</li>
           </ul>
         </section>
 
         <section id="links">
           <h2>Links acadêmicos</h2>
           <ul class="link-list">
-            <li><a href="#" target="_blank" rel="noopener noreferrer">Currículo Lattes</a></li>
-            <li><a href="#" target="_blank" rel="noopener noreferrer">ORCID</a></li>
+            <li><a href="http://lattes.cnpq.br/4553735282943824" target="_blank" rel="noopener noreferrer">Currículo Lattes</a></li>
+            <li><a href="https://orcid.org/0000-0003-0626-144X" target="_blank" rel="noopener noreferrer">ORCID</a></li>
+            <li><a href="https://github.com/suzadedossantos" target="_blank" rel="noopener noreferrer">GitHub</a></li>
             <li><a href="#" target="_blank" rel="noopener noreferrer">Google Scholar</a></li>
             <li><a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-            <li><a href="https://github.com/suzadedossantos" target="_blank" rel="noopener noreferrer">GitHub</a></li>
           </ul>
         </section>
 
         <section id="contato">
           <h2>Contato</h2>
           <p>
-            Para colaborações, projetos, oportunidades acadêmicas ou contato profissional,
-            você pode me escrever por e-mail ou acessar meus perfis acadêmicos e institucionais.
+            Para colaborações, projetos, oportunidades acadêmicas ou contato profissional, você pode acessar meus perfis acadêmicos e institucionais ou entrar em contato por e-mail.
           </p>
           <p>
             <strong>E-mail:</strong> <a href="mailto:seuemail@exemplo.com">seuemail@exemplo.com</a>
