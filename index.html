@@ -1,454 +1,99 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Suzane Santos</title>
-  <meta name="description" content="Site pessoal acadêmico de Suzane Santos, doutoranda em Ciência da Computação com foco em Interação Humano-Computador, UX, avaliação, acessibilidade e inclusão." />
-  <style>
-    :root {
-      --bg: #f5f4f1;
-      --surface: #ffffff;
-      --text: #1f1f1c;
-      --muted: #66665f;
-      --line: #d9d6cf;
-      --primary: #0f5c56;
-      --primary-soft: #edf5f4;
-      --max: 1080px;
-      --radius: 10px;
-    }
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Suzane Santos | UX Research</title><meta name="description" content="Portfólio de Suzane Santos, UX Researcher e doutoranda em IHC no ICMC-USP. Estudos de caso em usabilidade, acessibilidade, inclusão e IA.">
+<meta property="og:title" content="Suzane Santos | UX Research"><meta property="og:description" content="Portfólio de Suzane Santos, UX Researcher e doutoranda em IHC no ICMC-USP. Estudos de caso em usabilidade, acessibilidade, inclusão e IA.">
+<link rel="preconnect" href="https://api.fontshare.com"><link href="https://api.fontshare.com/v2/css?f[]=gambetta@400,500,600&f[]=general-sans@400,500,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"></head><body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<header class="site-header"><div class="wrap header-inner">
+<a class="wordmark" href="index.html">Suzane Santos</a>
+<nav aria-label="Principal"><a href="index.html#casos">Estudos de caso</a><a href="index.html#sobre">Sobre</a><a href="index.html#contato">Contato</a></nav>
+</div></header>
+<main id="conteudo">
+<section class="hero"><div class="wrap hero-inner">
+<p class="eyebrow">UX Research · Acessibilidade · Inclusão</p>
+<h1>Pesquisa com pessoas reais, com rigor de método.</h1>
+<p class="lede">Sou Suzane Santos, doutoranda em Interação Humano-Computador no ICMC-USP. Planejo e conduzo testes de usabilidade, entrevistas e pesquisas de campo, inclusive com públicos pouco ouvidos, e transformo o que encontro em decisões de design.</p>
+<ul class="credentials">
+<li><strong>Doutorado em andamento</strong><span>Ciências de Computação, ICMC-USP</span></li>
+<li><strong>Mestrado</strong><span>Ciências de Computação, ICMC-USP (2022)</span></li>
+<li><strong>Graduação</strong><span>Engenharia da Computação, UFPA</span></li>
+<li><strong>Melhor Artigo</strong><span>IHC 2026</span></li>
+</ul>
+</div></section>
 
-    * {
-      box-sizing: border-box;
-    }
+<section class="section" id="casos" aria-labelledby="casos-titulo"><div class="wrap">
+<div class="section-head"><h2 id="casos-titulo">Estudos de caso</h2><p>Sete pesquisas, do doutorado a colaborações, com o meu papel em cada uma.</p></div>
+<div class="cards"><article class="card card-lead card-feature">
+<a href="casos/emoframe-doutorado.html" class="card-link">
+<div class="card-img fit"><img src="img/doutorado-survey.webp" alt="Gráfico das funcionalidades desejadas por nível de experiência" loading="eager"></div>
+<div class="card-body"><p class="card-tag">Doutorado · Survey</p>
+<h3>EmoFrame: o que profissionais esperam de uma ferramenta de avaliação</h3><p>Survey com 60 profissionais de computação para priorizar as funcionalidades do EmoFrame. O pedido mais frequente foi um painel de resultados (81,67%), e as necessidades mudaram com a experiência.</p>
+<ul class="facts"><li>60 profissionais</li><li>Survey online</li><li>IHC 2026</li></ul><span class="more">Ler o estudo de caso <span aria-hidden="true">→</span></span></div></a></article><article class="card">
+<a href="casos/eva.html" class="card-link">
+<div class="card-img"><img src="img/eva-interface.webp" alt="Interface conversacional da EVA" loading="eager"></div>
+<div class="card-body"><p class="card-tag">IA e confiança</p>
+<h3>EVA: confiança e transparência em um assistente de IA</h3><p>Avaliação de uma assistente baseada em LLM que recomenda métodos de avaliação em IHC. As pessoas usaram a recomendação, mas confiaram mais quando entenderam o porquê.</p>
+<ul class="facts"><li>8 especialistas</li><li>Likert e entrevistas</li><li>IHC 2026</li></ul><span class="more">Ler o estudo de caso <span aria-hidden="true">→</span></span></div></a></article><article class="card">
+<a href="casos/pix-ribeirinhos.html" class="card-link">
+<div class="card-img"><img src="img/pix-thumb.webp" alt="Ícones de Pix, QR Code, chave e dinheiro usados no estudo" loading="eager"></div>
+<div class="card-body"><p class="card-tag">Pesquisa de campo</p>
+<h3>Pix para todos: pesquisa com uma comunidade ribeirinha</h3><p>Pesquisa de campo com 12 moradores de uma comunidade ribeirinha no Pará. A maioria não reconheceu o símbolo do Pix, e o estudo gerou 14 recomendações de design.</p>
+<ul class="facts"><li>12 participantes</li><li>Entrevistas e protótipo</li><li>IHC 2023</li></ul><span class="more">Ler o estudo de caso <span aria-hidden="true">→</span></span></div></a></article><article class="card">
+<a href="casos/rufus.html" class="card-link">
+<div class="card-img"><img src="img/rufus-web.webp" alt="Interface web de criação de jogos do RUFUS" loading="eager"></div>
+<div class="card-body"><p class="card-tag">Inclusão</p>
+<h3>RUFUS: avaliação com educadoras de crianças com autismo</h3><p>Teste de usabilidade da interface de criação de jogos com educadoras de uma instituição parceira. As notas foram máximas, e a observação revelou oito pontos de atrito.</p>
+<ul class="facts"><li>2 educadoras</li><li>Pensar em voz alta e CBW</li><li>CHI PLAY 2026</li></ul><span class="more">Ler o estudo de caso <span aria-hidden="true">→</span></span></div></a></article><article class="card">
+<a href="casos/persona.html" class="card-link">
+<div class="card-img fit"><img src="img/persona-fluxo.webp" alt="Fluxo metodológico comparando GenderMag e sessão moderada" loading="eager"></div>
+<div class="card-body"><p class="card-tag">Melhor Artigo IHC 2026</p>
+<h3>Where Is My Persona? Os limites das personas</h3><p>Comparação entre o GenderMag e a experiência de uma pessoa trans ao criar uma conta no Reddit. O risco mais importante para ela quase não aparece no método.</p>
+<ul class="facts"><li>Inspeção e sessão moderada</li><li>Reddit</li><li>IHC 2026</li></ul><span class="more">Ler o estudo de caso <span aria-hidden="true">→</span></span></div></a></article><article class="card">
+<a href="casos/emoframe-mestrado.html" class="card-link">
+<div class="card-img"><img src="img/emoframe-instrumentos.webp" alt="Tela com os instrumentos de avaliação do EmoFrame" loading="eager"></div>
+<div class="card-body"><p class="card-tag">Mestrado</p>
+<h3>EmoFrame: avaliação emocional do papel para o digital</h3><p>Design participativo com profissionais de saúde e quatro formas de avaliação. Notas altas no SUS, e problemas concretos revelados pelas entrevistas e pela avaliação heurística.</p>
+<ul class="facts"><li>11 participantes</li><li>3 especialistas em IHC</li><li>ICMC-USP 2022</li></ul><span class="more">Ler o estudo de caso <span aria-hidden="true">→</span></span></div></a></article><article class="card">
+<a href="casos/epage.html" class="card-link">
+<div class="card-img fit"><img src="img/page-demandas.webp" alt="Gráfico de radar com o mapa de demandas do PAGe" loading="eager"></div>
+<div class="card-body"><p class="card-tag">Visualização de dados</p>
+<h3>ePAGe: quem consegue interpretar os resultados?</h3><p>Digitalização de um instrumento de Gerontologia e um estudo comparando como especialistas e não especialistas leem seus gráficos e propõem encaminhamentos.</p>
+<ul class="facts"><li>4 profissionais</li><li>7 resultados reais</li><li>IHC 2023</li></ul><span class="more">Ler o estudo de caso <span aria-hidden="true">→</span></span></div></a></article></div>
+</div></section>
 
-    html {
-      scroll-behavior: smooth;
-    }
+<section class="section section-alt" id="metodos" aria-labelledby="metodos-titulo"><div class="wrap">
+<div class="section-head"><h2 id="metodos-titulo">Como eu pesquiso</h2></div>
+<div class="methods">
+<div><h3>Entender as pessoas</h3><p>Entrevistas semiestruturadas, pesquisa de campo, design participativo e levantamento de requisitos com especialistas.</p></div>
+<div><h3>Avaliar interfaces</h3><p>Testes de usabilidade moderados, pensar em voz alta, avaliação heurística, percurso cognitivo e Método de Avaliação de Comunicabilidade.</p></div>
+<div><h3>Medir a experiência</h3><p>SUS, UEQ, SAM, PANAS e escalas Likert, com análise descritiva e cruzamento com dados qualitativos.</p></div>
+<div><h3>Incluir quem fica de fora</h3><p>Pesquisa com pessoas com deficiência, idosas, trans e de gênero diverso, e comunidades com pouco acesso à internet, além de GenderMag e inspeção com leitor de tela.</p></div>
+</div>
+</div></section>
 
-    body {
-      margin: 0;
-      font-family: Georgia, "Times New Roman", serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.65;
-    }
+<section class="section" id="sobre" aria-labelledby="sobre-titulo"><div class="wrap about">
+<div><h2 id="sobre-titulo">Sobre</h2></div>
+<div class="about-text">
+<p>Pesquiso como as pessoas avaliam, usam e sentem a tecnologia. No doutorado, desenvolvo o EmoFrame, um framework e sistema que apoia o planejamento de avaliações em IHC. Antes disso, no mestrado, levei instrumentos de avaliação emocional do papel para o digital, em parceria com profissionais de Psicologia e Gerontologia.</p>
+<p>Minha produção passa por acessibilidade, tecnologias para pessoas idosas e diversidade de gênero. Também coorientei trabalhos de conclusão de curso e participei de ações de extensão em educação digital para pessoas idosas.</p>
+<h3>Reconhecimentos</h3>
+<ul class="awards">
+<li><strong>2026</strong> Melhor Artigo, trilha Ideias Inovadoras e Resultados Emergentes, IHC 2026</li>
+<li><strong>2024</strong> Melhor Artigo, WASHES 2024 (coautoria)</li>
+<li><strong>2024</strong> Melhor projeto, Prêmio WebMedia LF 2024 (coautoria)</li>
+<li><strong>2019</strong> Menção honrosa, Artigos Completos, IHC 2019 (coautoria)</li>
+</ul>
+<h3>Liderança</h3>
+<p>Coorientei 5 trabalhos de conclusão de curso na UFPA, incluindo os que deram origem à EVA e ao ePAGe, que aparecem neste portfólio.</p>
+</div>
+</div></section>
 
-    a {
-      color: var(--primary);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .container {
-      width: min(92%, var(--max));
-      margin: 0 auto;
-    }
-
-    .skip-link {
-      position: absolute;
-      left: -9999px;
-      top: auto;
-    }
-
-    .skip-link:focus {
-      left: 16px;
-      top: 16px;
-      background: white;
-      padding: 10px 14px;
-      border: 1px solid var(--line);
-      z-index: 1000;
-    }
-
-    header {
-      background: var(--surface);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .topbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 20px;
-      padding: 28px 0 18px;
-      flex-wrap: wrap;
-    }
-
-    .site-name {
-      font-size: 1rem;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin: 0 0 6px;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.4fr 0.8fr;
-      gap: 44px;
-      align-items: start;
-    }
-
-    h1 {
-      font-size: 3rem;
-      line-height: 1.05;
-      margin: 0 0 12px;
-      font-weight: normal;
-    }
-
-    .subtitle {
-      font-size: 1.15rem;
-      color: var(--muted);
-      margin: 0 0 18px;
-    }
-
-    .intro {
-      max-width: 62ch;
-      margin: 0;
-    }
-
-    .side-card {
-      background: var(--primary-soft);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 20px;
-    }
-
-    .side-card-layout {
-      display: flex;
-      align-items: flex-start;
-      gap: 18px;
-    }
-
-    .profile-photo {
-      width: 160px;
-      height: 160px;
-      object-fit: cover;
-      border-radius: 8px;
-      border: 1px solid var(--line);
-      display: block;
-      flex: 0 0 160px;
-    }
-
-    .side-card-info {
-      flex: 1;
-      min-width: 0;
-    }
-
-    .side-card h2 {
-      margin-top: 0;
-      margin-bottom: 12px;
-      font-size: 1rem;
-      font-family: Arial, Helvetica, sans-serif;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--muted);
-    }
-
-    .meta-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .meta-list li + li {
-      margin-top: 10px;
-    }
-
-    nav {
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-      background: var(--surface);
-    }
-
-    .nav-inner {
-      display: flex;
-      gap: 24px;
-      flex-wrap: wrap;
-      padding: 14px 0;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.95rem;
-    }
-
-    .nav-inner a {
-      color: var(--text);
-    }
-
-    main {
-      padding: 34px 0 60px;
-    }
-
-    .content-grid {
-      display: grid;
-      grid-template-columns: 220px 1fr;
-      gap: 36px;
-    }
-
-    .section-menu {
-      position: sticky;
-      top: 18px;
-      align-self: start;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    .section-menu h2 {
-      font-size: 0.92rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--muted);
-      margin: 0 0 14px;
-    }
-
-    .section-menu ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .section-menu li + li {
-      margin-top: 10px;
-    }
-
-    .section-menu a {
-      color: var(--muted);
-    }
-
-    .main-content {
-      display: flex;
-      flex-direction: column;
-      gap: 22px;
-    }
-
-    section {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 28px;
-    }
-
-    section h2 {
-      margin-top: 0;
-      margin-bottom: 14px;
-      font-size: 1.65rem;
-      font-weight: normal;
-    }
-
-    section p {
-      margin-top: 0;
-    }
-
-    .tag-list,
-    .link-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .tag-list li,
-    .link-list li {
-      padding: 10px 0;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .tag-list li:last-child,
-    .link-list li:last-child {
-      border-bottom: none;
-    }
-
-    .two-columns {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-    }
-
-    footer {
-      border-top: 1px solid var(--line);
-      padding: 24px 0 40px;
-      color: var(--muted);
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.92rem;
-    }
-
-    @media (max-width: 900px) {
-      .hero-grid,
-      .content-grid,
-      .two-columns {
-        grid-template-columns: 1fr;
-      }
-
-      .section-menu {
-        position: static;
-      }
-
-      h1 {
-        font-size: 2.2rem;
-      }
-
-      .side-card-layout {
-        flex-direction: column;
-      }
-
-      .profile-photo {
-        width: 180px;
-        height: 180px;
-        flex-basis: auto;
-      }
-    }
-  </style>
-</head>
-<body>
-  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
-
-  <header>
-    <div class="container">
-      <div class="topbar">
-        <div>
-          <p class="site-name">Site pessoal acadêmico</p>
-          <h1>Suzane Santos</h1>
-          <p class="subtitle">
-            Doutoranda em Ciência da Computação · Interação Humano-Computador · UX · Avaliação e acessibilidade
-          </p>
-          <p class="intro">
-            Sou doutoranda em Ciências de Computação e Matemática Computacional na Universidade de São Paulo (USP), com pesquisa em Interação Humano-Computador, avaliação de experiência do usuário, desenvolvimento e validação de instrumentos de medição, revisões sistemáticas e rápidas de literatura e estudos empíricos com populações específicas.
-          </p>
-        </div>
-
-        <aside class="side-card" aria-label="Informações principais">
-          <div class="side-card-layout">
-            <img
-              src="./suzane.png"
-              alt="Foto de Suzane Santos"
-              class="profile-photo"
-              width="600"
-              height="600"
-            />
-
-            <div class="side-card-info">
-              <h2>Informações</h2>
-              <ul class="meta-list">
-                <li><strong>Área:</strong> Interação Humano-Computador e UX</li>
-                <li><strong>Vínculo:</strong> Doutorado em Ciências de Computação e Matemática Computacional, USP</li>
-                <li><strong>Pesquisa:</strong> Avaliação de UX, instrumentos, acessibilidade e design inclusivo</li>
-                <li><strong>Lattes:</strong> <a href="http://lattes.cnpq.br/4553735282943824" target="_blank" rel="noopener noreferrer">4553735282943824</a></li>
-                <li><strong>ORCID:</strong> <a href="https://orcid.org/0000-0003-0626-144X" target="_blank" rel="noopener noreferrer">0000-0003-0626-144X</a></li>
-              </ul>
-            </div>
-          </div>
-        </aside>
-      </div>
-    </div>
-  </header>
-
-  <nav aria-label="Navegação principal">
-    <div class="container nav-inner">
-      <a href="#perfil">Perfil</a>
-      <a href="#pesquisa">Pesquisa</a>
-      <a href="#projetos">Projetos</a>
-      <a href="#formacao">Formação</a>
-      <a href="#links">Links</a>
-      <a href="#contato">Contato</a>
-    </div>
-  </nav>
-
-  <main id="conteudo" class="container">
-    <div class="content-grid">
-      <aside class="section-menu" aria-label="Seções da página">
-        <h2>Nesta página</h2>
-        <ul>
-          <li><a href="#perfil">Perfil</a></li>
-          <li><a href="#pesquisa">Pesquisa</a></li>
-          <li><a href="#projetos">Projetos</a></li>
-          <li><a href="#formacao">Formação</a></li>
-          <li><a href="#links">Links acadêmicos</a></li>
-          <li><a href="#contato">Contato</a></li>
-        </ul>
-      </aside>
-
-      <div class="main-content">
-        <section id="perfil">
-          <h2>Perfil</h2>
-          <p>
-            Sou doutoranda em Ciências de Computação e Matemática Computacional na Universidade de São Paulo (USP). Também concluí o mestrado no mesmo programa, com a dissertação <em>EmoFrame</em>, um framework composto por avaliações de respostas emocionais de usuários frente a sistemas interativos, e sou bacharela em Engenharia da Computação pela Universidade Federal do Pará (UFPA).
-          </p>
-          <p>
-            Minha atuação articula pesquisa em Interação Humano-Computador, avaliação de experiência do usuário, metodologias de pesquisa e desenvolvimento de instrumentos. Tenho interesse especial em acessibilidade, design inclusivo, populações com baixa literacia e estudos com seres humanos conduzidos com rigor ético e metodológico.
-          </p>
-        </section>
-
-        <section id="pesquisa">
-          <h2>Pesquisa</h2>
-          <p>
-            Minha pesquisa está centrada na avaliação de experiência do usuário e na produção de evidências metodologicamente rigorosas em IHC.
-          </p>
-          <ul class="tag-list">
-            <li>Desenvolvimento e validação de instrumentos de medição em UX.</li>
-            <li>Revisões sistemáticas e rápidas de literatura.</li>
-            <li>Frameworks conceituais para avaliação de experiência do usuário.</li>
-            <li>Design de surveys e análise de dados quantitativos e qualitativos.</li>
-            <li>Acessibilidade, design inclusivo e avaliação com populações específicas.</li>
-          </ul>
-        </section>
-
-        <section id="projetos">
-          <h2>Projetos</h2>
-          <div class="two-columns">
-            <div>
-              <h3>EmoFrame</h3>
-              <p>
-                Framework voltado à avaliação de respostas emocionais de usuários frente a sistemas interativos, desenvolvido no contexto do meu mestrado e desdobrado em pesquisas posteriores sobre avaliação de UX.
-              </p>
-            </div>
-            <div>
-              <h3>Acessibilidade e inclusão</h3>
-              <p>
-                Pesquisas e colaborações sobre barreiras de acessibilidade em ferramentas de desenvolvimento, educação em acessibilidade, design inclusivo e tecnologias para diferentes públicos e contextos sociais.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section id="formacao">
-          <h2>Formação</h2>
-          <ul class="tag-list">
-            <li>Doutorado em andamento em Ciências de Computação e Matemática Computacional, USP.</li>
-            <li>Mestrado em Ciências de Computação e Matemática Computacional, USP, concluído em 2022.</li>
-            <li>Bacharelado em Engenharia da Computação, UFPA.</li>
-            <li>Quatro anos de iniciação científica com pesquisas em Computação Bio-Inspirada.</li>
-          </ul>
-        </section>
-
-        <section id="links">
-          <h2>Links acadêmicos</h2>
-          <ul class="link-list">
-            <li><a href="http://lattes.cnpq.br/4553735282943824" target="_blank" rel="noopener noreferrer">Currículo Lattes</a></li>
-            <li><a href="https://orcid.org/0000-0003-0626-144X" target="_blank" rel="noopener noreferrer">ORCID</a></li>
-            <li><a href="https://github.com/suzadedossantos" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-            <li><a href="https://scholar.google.com/citations?user=-9taXzsAAAAJ&hl=pt-BR" target="_blank" rel="noopener noreferrer">Google Scholar</a></li>
-            <li><a href="https://www.linkedin.com/in/suzanedossantos/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-          </ul>
-        </section>
-
-        <section id="contato">
-          <h2>Contato</h2>
-          <p>
-            Para colaborações, projetos, oportunidades acadêmicas ou contato profissional, você pode acessar meus perfis acadêmicos e institucionais ou entrar em contato por e-mail.
-          </p>
-          <p>
-            <strong>E-mail:</strong> <a href="mailto:suzanesantos@usp.br">suzanesantos@usp.br</a>
-          </p>
-        </section>
-      </div>
-    </div>
-  </main>
-
-  <footer>
-    <div class="container">
-      <p>© 2026 Suzane Santos. Site hospedado no GitHub Pages.</p>
-    </div>
-  </footer>
-</body>
-</html>
+<section class="section contact" id="contato" aria-labelledby="contato-titulo"><div class="wrap contact-inner">
+<h2 id="contato-titulo">Vamos conversar</h2>
+<p>Estou aberta a oportunidades em UX Research e a colaborações em pesquisa.</p>
+<p class="contact-links"><a class="btn" href="mailto:suzanesantos@usp.br">suzanesantos@usp.br</a>
+<a href="https://www.linkedin.com/in/suzanedossantos">LinkedIn</a><a href="curriculo-suzane-santos.pdf" download>Baixar currículo (PDF)</a><a href="http://lattes.cnpq.br/4553735282943824">Currículo Lattes</a><a href="https://orcid.org/0000-0003-0626-144X">ORCID</a><a href="https://scholar.google.com/citations?user=-9taXzsAAAAJ&amp;hl=pt-BR">Google Scholar</a></p>
+</div></section>
+</main><footer class="site-footer" id="contato-rodape"><div class="wrap footer-inner">
+<p>Suzane Santos · UX Research e Interação Humano-Computador</p>
+<p><a href="mailto:suzanesantos@usp.br">suzanesantos@usp.br</a> · <a href="https://www.linkedin.com/in/suzanedossantos">LinkedIn</a> · <a href="http://lattes.cnpq.br/4553735282943824">Lattes</a> · <a href="https://orcid.org/0000-0003-0626-144X">ORCID</a> · <a href="https://scholar.google.com/citations?user=-9taXzsAAAAJ&amp;hl=pt-BR">Google Scholar</a></p>
+</div></footer></body></html>

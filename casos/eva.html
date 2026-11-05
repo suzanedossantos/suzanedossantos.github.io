@@ -1,0 +1,107 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EVA: confiança e transparência em um assistente de IA para avaliação em IHC | Suzane Santos</title><meta name="description" content="Avaliação de uma assistente baseada em LLM que recomenda métodos de avaliação em IHC. As pessoas usaram a recomendação, mas confiaram mais quando entenderam o porquê.">
+<meta property="og:title" content="EVA: confiança e transparência em um assistente de IA para avaliação em IHC | Suzane Santos"><meta property="og:description" content="Avaliação de uma assistente baseada em LLM que recomenda métodos de avaliação em IHC. As pessoas usaram a recomendação, mas confiaram mais quando entenderam o porquê.">
+<link rel="preconnect" href="https://api.fontshare.com"><link href="https://api.fontshare.com/v2/css?f[]=gambetta@400,500,600&f[]=general-sans@400,500,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../style.css"></head><body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<header class="site-header"><div class="wrap header-inner">
+<a class="wordmark" href="../index.html">Suzane Santos</a>
+<nav aria-label="Principal"><a href="../index.html#casos">Estudos de caso</a><a href="../index.html#sobre">Sobre</a><a href="../index.html#contato">Contato</a></nav>
+</div></header>
+<main id="conteudo">
+<section class="case-hero"><div class="wrap">
+<p class="eyebrow"><a href="../index.html#casos">Estudos de caso</a> · IA e confiança</p>
+<h1>EVA: confiança e transparência em um assistente de IA para avaliação em IHC</h1>
+<p class="lede">Avaliação de uma assistente baseada em LLM que recomenda métodos de avaliação em IHC. As pessoas usaram a recomendação, mas confiaram mais quando entenderam o porquê.</p>
+<div class="role"><span>Meu papel</span><p>Coorientadora do TCC que deu origem ao projeto. Fiz o levantamento de requisitos e a análise dos dados dos resultados, e acompanhei todas as etapas até a publicação.</p></div>
+</div></section>
+<div class="wrap case-layout">
+<aside class="case-meta"><dl><div class="meta-item"><dt>Tipo</dt><dd>Pesquisa avaliativa de um produto com IA</dd></div><div class="meta-item"><dt>Métodos</dt><dd>Reuniões com especialistas, avaliação iterativa, questionário em escala Likert e entrevistas</dd></div><div class="meta-item"><dt>Participantes</dt><dd>8 especialistas e profissionais de tecnologia (4 da academia e 4 da indústria)</dd></div><div class="meta-item"><dt>Equipe</dt><dd>Kim Lima de Lima, Luciano Arruda Teran, Kamila Rios da Hora Rodrigues e Marcelle Pereira Mota (UFPA e USP)</dd></div><div class="meta-item"><dt>Resultado</dt><dd>Apresentado no IHC 2026 (outubro), Trilha Ideias Inovadoras e Resultados Emergentes. Anais em publicação</dd></div><div class="meta-item"><dt>Código e questionário</dt><dd><a href="https://github.com/human-interaction-with-tecnologies/EVA">repositório aberto no GitHub</a></dd></div></dl></aside>
+<article class="prose"><h2>Resumo</h2>
+<p>A EVA é uma assistente conversacional que recomenda métodos de avaliação de interfaces de acordo com o contexto de cada projeto. Ela foi desenvolvida dentro do EmoFrame, framework que proponho no meu doutorado. Na avaliação, as pessoas acharam a ferramenta fácil de usar e consideraram as recomendações úteis. Também apareceu um ponto crítico para produtos com IA: <strong>as pessoas usam a recomendação, mas confiam mais quando entendem por que ela foi feita.</strong></p>
+<hr />
+<h2>O problema</h2>
+<p>Existem muitos métodos de avaliação em IHC, e escolher o mais adequado não é simples. Pesam o custo, o momento do projeto, o perfil das pessoas usuárias e o tempo disponível. Quem tem pouca experiência ou poucos recursos costuma travar em perguntas como:</p>
+<ul>
+<li>Qual método devo usar?</li>
+<li>Em que momento devo aplicar?</li>
+<li>Qual cabe no meu orçamento?</li>
+<li>Como entendo um método rapidamente?</li>
+</ul>
+<p>Ter muitas opções nem sempre ajuda e pode levar a escolhas piores ou à desistência. A questão era se um assistente de IA conseguiria orientar essa escolha sem tirar o julgamento de quem avalia.</p>
+<h2>Pergunta de pesquisa</h2>
+<p>Uma assistente baseada em IA consegue recomendar métodos de avaliação adequados ao contexto, de um jeito útil e fácil de usar, para profissionais com diferentes níveis de experiência?</p>
+<hr />
+<h2>Processo</h2><figure class="fig fig-wide"><div class="fig-frame"><img src="../img/eva-fluxo.webp" alt="Fluxo metodológico do projeto, do levantamento de requisitos à avaliação final."></div><figcaption>Fluxo metodológico do projeto, do levantamento de requisitos à avaliação final.</figcaption></figure>
+<p>O projeto seguiu um ciclo iterativo de construir, avaliar e ajustar, em cinco etapas:</p>
+<ol>
+<li><strong>Entendimento do problema (conduzido por mim):</strong> levantamento de requisitos em reuniões com especialistas em IHC, para entender as necessidades na escolha de métodos e o tipo de conversa que a ferramenta precisaria sustentar.</li>
+<li><strong>Escolha da abordagem:</strong> uma interface conversacional com LLM, para que a interação acontecesse em linguagem natural.</li>
+<li><strong>Primeira versão funcional.</strong></li>
+<li><strong>Ciclos de avaliação com especialistas:</strong> feedback sobre a usabilidade e sobre a qualidade das recomendações, com ajustes até a versão estabilizar.</li>
+<li><strong>Avaliação final</strong> com profissionais de desenvolvimento e especialistas em IHC.</li>
+</ol>
+<h3>Uma decisão guiada pelo feedback</h3>
+<p>Na etapa 4, os especialistas apontaram um limite importante: a primeira versão não conseguia formular recomendações que <strong>combinassem técnicas diferentes</strong>, algo comum na prática real. Esse feedback levou a equipe a reformular a forma como a assistente busca e organiza o conhecimento. Ela passou a usar um grafo de conhecimento sobre os métodos e a raciocinar em etapas antes de responder.</p>
+<blockquote>
+<p>Esse é o ponto que eu destacaria: <strong>a pesquisa com especialistas mudou a arquitetura do produto</strong>, não apenas a interface.</p>
+</blockquote>
+<hr />
+<h2>Avaliação final</h2><figure class="fig fig-narrow"><div class="fig-frame"><img src="../img/eva-interface.webp" alt="Interface conversacional da EVA, com uma recomendação de métodos."></div><figcaption>Interface conversacional da EVA, com uma recomendação de métodos.</figcaption></figure>
+<p><strong>Participantes:</strong> 8 pessoas que fazem prototipação ou avaliação de interfaces, metade da academia e metade da indústria. A maioria avalia de forma esporádica (mensalmente ou ocasionalmente), e duas avaliam com frequência (semanal ou diariamente).</p>
+<p><strong>Procedimento:</strong> sessões individuais com tarefas de recomendação, seguidas de um questionário em três seções (perfil, qualidade das recomendações e usabilidade) e uma entrevista.</p>
+<p><strong>Cuidados:</strong></p>
+<ul>
+<li>Projeto aprovado pelo Comitê de Ética, com consentimento livre e esclarecido.</li>
+<li>Nenhum participante teve contato prévio com a ferramenta, para preservar a primeira impressão.</li>
+<li>Registro de todas as conversas para analisar falhas: 10 conversas e 54 interações.</li>
+</ul>
+<hr />
+<h2>Principais achados</h2>
+<p>Analisei os dados do questionário e das sessões, cruzando as respostas sobre a qualidade das recomendações, a usabilidade e a confiança.</p>
+<p><strong>1. As recomendações foram consideradas úteis.</strong></p>
+<p>Os 8 participantes consideraram as sugestões equivalentes ou superiores às práticas que já usavam: 4 acharam equivalentes, 3 muito melhores e 1 melhor.</p>
+<p><strong>2. A interação foi simples.</strong></p>
+<p>Todos concordaram que a EVA é fácil de usar (7 deram nota máxima) e que o tempo de resposta é adequado. Poucos precisaram reformular as perguntas.</p>
+<p><strong>3. A confiança foi o ponto mais frágil.</strong></p>
+<p>"Senti-me confiante" foi o único item com nota mínima, além de duas respostas neutras. Um participante sugeriu que a assistente mostrasse <strong>como chegou à recomendação</strong>.</p>
+<p><strong>4. Houve falhas, mas foram raras.</strong></p>
+<p>Houve 1 resposta fora de contexto em 54 interações. Também apareceram dificuldades para mudar de assunto no meio de uma conversa.</p>
+<hr />
+<h2>O que mudou a partir disso</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Achado</th>
+<th>Decisão de design</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pouca confiança na recomendação</td>
+<td>Incluir explicações na interface, mostrando os critérios usados e o caminho de raciocínio</td>
+</tr>
+<tr>
+<td>Dificuldade para mudar o contexto da conversa</td>
+<td>Refinar o gerenciamento de contexto do diálogo</td>
+</tr>
+<tr>
+<td>Amostra com alto letramento digital</td>
+<td>Testar com públicos menos familiarizados com chatbots</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2>Limitações</h2>
+<ul>
+<li>Amostra pequena e por conveniência. O plano era ter 10 participantes, mas o recrutamento chegou a 8.</li>
+<li>Por terem alto letramento digital, os participantes podem ter avaliado a facilidade de uso de forma otimista.</li>
+<li>Os resultados são evidências iniciais de utilidade e usabilidade, não uma validação definitiva.</li>
+</ul>
+<h2>O que eu aprendi</h2>
+<p>Em produtos com IA, ser fácil de usar não basta para gerar confiança. Uma interface simples pode esconder justamente a informação de que a pessoa precisa para decidir se aceita a recomendação. Avaliar a confiança separadamente da usabilidade foi o que revelou essa diferença.</p></article>
+</div>
+<div class="wrap"><nav class="case-nav" aria-label="Outros estudos de caso"><a class="prev" href="emoframe-doutorado.html"><span>Anterior</span>EmoFrame: o que profissionais esperam de uma ferramenta de avaliação</a><a class="next" href="pix-ribeirinhos.html"><span>Próximo</span>Pix para todos: pesquisa com uma comunidade ribeirinha</a></nav></div>
+</main><footer class="site-footer" id="contato-rodape"><div class="wrap footer-inner">
+<p>Suzane Santos · UX Research e Interação Humano-Computador</p>
+<p><a href="mailto:suzanesantos@usp.br">suzanesantos@usp.br</a> · <a href="https://www.linkedin.com/in/suzanedossantos">LinkedIn</a> · <a href="http://lattes.cnpq.br/4553735282943824">Lattes</a> · <a href="https://orcid.org/0000-0003-0626-144X">ORCID</a> · <a href="https://scholar.google.com/citations?user=-9taXzsAAAAJ&amp;hl=pt-BR">Google Scholar</a></p>
+</div></footer></body></html>
