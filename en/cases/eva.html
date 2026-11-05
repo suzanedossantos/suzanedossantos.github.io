@@ -1,0 +1,109 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EVA: trust and transparency in an AI assistant for HCI evaluation | Suzane Santos</title><meta name="description" content="Evaluation of an LLM-based assistant that recommends HCI evaluation methods. People used the recommendations, but trusted them more when they understood why.">
+<meta property="og:title" content="EVA: trust and transparency in an AI assistant for HCI evaluation | Suzane Santos"><meta property="og:description" content="Evaluation of an LLM-based assistant that recommends HCI evaluation methods. People used the recommendations, but trusted them more when they understood why.">
+<meta property="og:type" content="website"><meta property="og:image" content="https://suzanedossantos.github.io/img/en/og-portfolio.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="627"><meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" hreflang="pt-BR" href="../../casos/eva.html">
+<link rel="stylesheet" href="../../fonts/fonts.css"><link rel="stylesheet" href="../../style.css"></head><body>
+<a class="skip" href="#content">Skip to content</a>
+<header class="site-header"><div class="wrap header-inner">
+<a class="wordmark" href="../index.html">Suzane Santos</a>
+<nav aria-label="Main"><a href="../index.html#cases">Case studies</a><a href="../index.html#about">About</a><a href="../index.html#contact">Contact</a><a class="lang" href="../../casos/eva.html" hreflang="pt-BR" lang="pt-BR" aria-label="Ler em português">PT</a></nav>
+</div></header>
+<main id="content">
+<section class="case-hero"><div class="wrap">
+<p class="eyebrow"><a href="../index.html#cases">Case studies</a> · AI and trust</p>
+<h1>EVA: trust and transparency in an AI assistant for HCI evaluation</h1>
+<p class="lede">Evaluation of an LLM-based assistant that recommends HCI evaluation methods. People used the recommendations, but trusted them more when they understood why.</p>
+<div class="role"><span>My role</span><p>Co-supervisor of the undergraduate thesis that started the project. I gathered the requirements, analyzed the results data and followed every stage through publication.</p></div>
+</div></section>
+<div class="wrap case-layout">
+<aside class="case-meta"><dl><div class="meta-item"><dt>Type</dt><dd>Evaluative research on an AI product</dd></div><div class="meta-item"><dt>Methods</dt><dd>Meetings with experts, iterative evaluation, Likert-scale questionnaire and interviews</dd></div><div class="meta-item"><dt>Participants</dt><dd>8 experts and technology professionals (4 from academia and 4 from industry)</dd></div><div class="meta-item"><dt>Team</dt><dd>Kim Lima de Lima, Luciano Arruda Teran, Kamila Rios da Hora Rodrigues and Marcelle Pereira Mota (UFPA and USP)</dd></div><div class="meta-item"><dt>Outcome</dt><dd>Presented at IHC 2026 (October), Innovative Ideas and Emerging Results Track. Proceedings forthcoming</dd></div><div class="meta-item"><dt>Code and questionnaire</dt><dd><a href="https://github.com/human-interaction-with-tecnologies/EVA">open repository on GitHub</a></dd></div></dl></aside>
+<article class="prose"><h2>Summary</h2>
+<p>EVA is a conversational assistant that recommends interface evaluation methods based on each project's context. It was developed within EmoFrame, the framework I propose in my PhD. In the evaluation, people found the tool easy to use and the recommendations useful. A critical point for AI products also emerged: <strong>people use the recommendation, but they trust it more when they understand why it was made.</strong></p>
+<hr />
+<h2>The problem</h2>
+<p>There are many evaluation methods in HCI, and choosing the right one is not simple. Cost, project stage, user profile and available time all matter. People with little experience or few resources often get stuck on questions like:</p>
+<ul>
+<li>Which method should I use?</li>
+<li>When should I apply it?</li>
+<li>Which one fits my budget?</li>
+<li>How can I understand a method quickly?</li>
+</ul>
+<p>Having many options does not always help and can lead to worse choices or to giving up. The question was whether an AI assistant could guide this choice without taking judgment away from the evaluator.</p>
+<h2>Research question</h2>
+<p>Can an AI-based assistant recommend context-appropriate evaluation methods, in a useful and easy-to-use way, for professionals with different levels of experience?</p>
+<hr />
+<h2>Process</h2><figure class="fig fig-wide"><div class="fig-frame"><img src="../../img/en/eva-fluxo.webp" alt="Project methodology, from requirements gathering to the final evaluation (redrawn in English from the paper)."></div><figcaption>Project methodology, from requirements gathering to the final evaluation (redrawn in English from the paper).</figcaption></figure>
+<p>The project followed an iterative build, evaluate and adjust cycle in five stages:</p>
+<ol>
+<li><strong>Understanding the problem (led by me):</strong> requirements gathering in meetings with HCI experts, to understand their needs when choosing methods and the kind of conversation the tool would need to support.</li>
+<li><strong>Choosing the approach:</strong> a conversational interface with an LLM, so that interaction could happen in natural language.</li>
+<li><strong>First working version.</strong></li>
+<li><strong>Evaluation cycles with experts:</strong> feedback on usability and on the quality of the recommendations, with adjustments until the version stabilized.</li>
+<li><strong>Final evaluation</strong> with development professionals and HCI experts.</li>
+</ol>
+<h3>A decision driven by feedback</h3>
+<p>In stage 4, the experts pointed out an important limitation: the first version could not produce recommendations that <strong>combined different techniques</strong>, which is common in real practice. This feedback led the team to rethink how the assistant retrieves and organizes knowledge. It started using a knowledge graph about the methods and reasoning in steps before answering.</p>
+<blockquote>
+<p>This is the point I would highlight: <strong>research with experts changed the product's architecture</strong>, not just its interface.</p>
+</blockquote>
+<hr />
+<h2>Final evaluation</h2><figure class="fig fig-narrow"><div class="fig-frame"><img src="../../img/eva-interface.webp" alt="EVA conversational interface with a method recommendation (interface in Portuguese)."></div><figcaption>EVA conversational interface with a method recommendation (interface in Portuguese).</figcaption></figure>
+<p><strong>Participants:</strong> 8 people who prototype or evaluate interfaces, half from academia and half from industry. Most evaluate occasionally (monthly or less), and two evaluate often (weekly or daily).</p>
+<p><strong>Procedure:</strong> individual sessions with recommendation tasks, followed by a three-section questionnaire (profile, recommendation quality and usability) and an interview.</p>
+<p><strong>Safeguards:</strong></p>
+<ul>
+<li>Approved by the Ethics Committee, with free and informed consent.</li>
+<li>No participant had used the tool before, to preserve first impressions.</li>
+<li>All conversations were logged to analyze failures: 10 conversations and 54 interactions.</li>
+</ul>
+<hr />
+<h2>Key findings</h2>
+<p>I analyzed the questionnaire and session data, cross-checking responses on recommendation quality, usability and trust.</p>
+<p><strong>1. The recommendations were seen as useful.</strong></p>
+<p>All 8 participants rated the suggestions as equivalent to or better than the practices they already used: 4 found them equivalent, 3 much better and 1 better.</p>
+<p><strong>2. The interaction was simple.</strong></p>
+<p>Everyone agreed that EVA is easy to use (7 gave the highest score) and that response time is adequate. Few needed to rephrase their questions.</p>
+<p><strong>3. Trust was the weakest point.</strong></p>
+<p>"I felt confident" was the only item with a lowest score, plus two neutral answers. One participant suggested that the assistant show <strong>how it reached the recommendation</strong>.</p>
+<p><strong>4. There were failures, but they were rare.</strong></p>
+<p>There was 1 off-context answer in 54 interactions. Participants also had trouble changing topics in the middle of a conversation.</p>
+<hr />
+<h2>What changed as a result</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Finding</th>
+<th>Design decision</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Low trust in the recommendation</td>
+<td>Add explanations to the interface, showing the criteria used and the reasoning path</td>
+</tr>
+<tr>
+<td>Difficulty changing the conversation context</td>
+<td>Refine dialogue context management</td>
+</tr>
+<tr>
+<td>Sample with high digital literacy</td>
+<td>Test with audiences less familiar with chatbots</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2>Limitations</h2>
+<ul>
+<li>Small convenience sample. The plan was 10 participants, but recruitment reached 8.</li>
+<li>Because of their high digital literacy, participants may have rated ease of use optimistically.</li>
+<li>The results are early evidence of usefulness and usability, not a definitive validation.</li>
+</ul>
+<h2>What I learned</h2>
+<p>In AI products, being easy to use is not enough to build trust. A simple interface can hide exactly the information a person needs to decide whether to accept the recommendation. Evaluating trust separately from usability is what revealed this gap.</p></article>
+</div>
+<div class="wrap"><nav class="case-nav" aria-label="Other case studies"><a class="prev" href="emoframe-doutorado.html"><span>Previous</span>EmoFrame: what professionals expect from an evaluation tool</a><a class="next" href="pix-ribeirinhos.html"><span>Next</span>Pix for everyone: research with a riverside community</a></nav></div>
+</main><footer class="site-footer"><div class="wrap footer-inner">
+<p>Suzane Santos · UX Research and Human-Computer Interaction</p>
+<p><a href="mailto:suzanesantos@usp.br">suzanesantos@usp.br</a> · <a href="https://www.linkedin.com/in/suzanedossantos">LinkedIn</a> · <a href="http://lattes.cnpq.br/4553735282943824">Lattes</a> · <a href="https://orcid.org/0000-0003-0626-144X">ORCID</a> · <a href="https://scholar.google.com/citations?user=-9taXzsAAAAJ&amp;hl=en">Google Scholar</a></p>
+</div></footer></body></html>

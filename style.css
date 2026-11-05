@@ -201,3 +201,12 @@ h1, h2 { font-family: var(--font-display); font-weight: 500; letter-spacing: -0.
 .card-feature .card-img { flex-basis: 55%; background: #fbf9f4; }
 .card-feature .card-img.fit img { padding: .75rem; }
 @media (max-width: 640px) { .card-feature .card-img { flex-basis: auto; } }
+.site-header nav a.lang { border: 1px solid var(--line); border-radius: 999px; padding: .3rem .7rem; align-self: center; font-weight: 600; letter-spacing: .04em; color: var(--accent); }
+.site-header nav a.lang:hover { border-color: var(--accent); }
+@media (max-width: 640px) { .site-header nav a[href$="#about"] { display: none; } }
+@media (max-width: 640px) {
+  .wordmark, .site-header nav a { white-space: nowrap; }
+  .site-header nav { gap: .9rem; align-items: center; }
+  .site-header nav a.lang { padding: .2rem .55rem; }
+}
+@media (max-width: 400px) { .site-header nav a[href$="#contato"], .site-header nav a[href$="#contact"] { display: none; } }
